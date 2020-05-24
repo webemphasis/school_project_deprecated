@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css'>
+   <link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="Style/Main.css">
+   <title>SA School App</title>
+</head>
+
+<body class="master">
+   <!-- nav bar 1  start-->
+   <header class="mainHeader">
+      <nav class="navbar navbar-light bg-light navCus1">
+         <a class="navbar-brand" href="#">
+            <div class="logo_Rect">
+               SA
+            </div>
+            <span class="text">School App</span>
+         </a>
+         <div>
+            <div class="right-content d-flex  justify-content-between">
+               <div class="float-left text-center">
+                  <span>Jone Aly</span><br>
+                  <span>Admin</span>
+               </div>
+               <div>
+                  <a class="float-right mt-2" href="#">
+                     <div class="arrow arrow-bottom myArrow">
+                        <ul class="log_dropdown">
+                           <li>
+                              <a href="">Text1</a></li>
+                           <li><a href="">Text2</a></li>
+                           <li><a href="">Text3</a></li>
+                           <li><a href="">Logout</a></li>
+                        </ul>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- nav bar 1  end-->
+      <!-- nav bar 2  start-->
+      <nav class="navbar navbar-expand-md navbar-light bg-light navCus2">
+         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <div class="navigationPath">
+               <a href="./students.html"><span class="navArrow arrow-bar is-left"></span></a>
+               <ul class="path">
+                  <li><a href="./Dashboard.html">Main</a></li>
+                  <li><a href="./students.html">Students</a></li>
+                  <li><a href="#" class="active">Master Details</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="mx-auto order-0">
+            <div class="navbar-brand mx-auto">
+               <h1 class="admissionText">Master</h1>
+            </div>
+         </div>
+         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+            </ul>
+         </div>
+      </nav>
+      <!-- nav bar 2  end-->
+   </header>
+   <div class="container">
+      <div class="row mt-5">
+         <div class="col-sm-12 col-lg-6">
+            <input type="button" class="btn_bb" id="importbtn" data-toggle="modal" data-target="#upload_success"
+               value="Import Students">
+         </div>
+         <div class="col-sm-12 col-lg-2">
+            <label for="inputsearch" class="sr-only">Search</label>
+            <input type="search" class="form-control" id="inputsearch" placeholder="Search">
+         </div>
+         <div class="col-sm-12 col-lg-4">
+            <ul class="dropdown-main">
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false">Class</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <li class="dropdown">
+                        <a class="dropdown-item" href="#">Class</a>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="#">I Std</a></li>
+                           <li><a class="dropdown-item" href="#">II Std</a></li>
+                           <li><a class="dropdown-item" href="#">III Std</a></li>
+                           <li><a class="dropdown-item" href="#">IV Std</a></li>
+                           <li><a class="dropdown-item" href="#">V Std</a></li>
+                        </ul>
+                     </li>
+                     <li class="dropdown">
+                        <a class="dropdown-item" href="#">Blood Group</a>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="#">A1+</a></li>
+                           <li><a class="dropdown-item" href="#">B1+</a></li>
+                           <li><a class="dropdown-item" href="#">O1+</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   </div>
+   <div class="container">
+   
+      <div class="row py-5">
+         <div class="col-12">
+            <table id="table1" class="table table-hover display responsive nowrap" style="width:100%">
+               <thead>
+                  <tr>
+                     <th>
+                        Roll Number
+                        <div class="table-title">Master’s Details</div>
+                     </th>
+                     <th>Photo</th>
+                     <th>Full Name</th>
+                     <th>Std</th>
+                     <th>Primary Contact</th>
+                     <th>Blood Group</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>
+                        0985
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Rajan</td>
+                     <td>VII-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        A+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0986
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Somsan</td>
+                     <td>II-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        B+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0987
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Vijay</td>
+                     <td>VII-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        A+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0988
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Gopi</td>
+                     <td>II-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        B+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0988
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Rajan</td>
+                     <td>VII-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        A+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0989
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Somsan</td>
+                     <td>II-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        B+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0990
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Rajan</td>
+                     <td>VII-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        A+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0991
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Somsan</td>
+                     <td>II-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        B+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0992
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Rajan</td>
+                     <td>VII-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        A+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0993
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Somsan</td>
+                     <td>II-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        B+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0994
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Rajan</td>
+                     <td>VII-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        A+
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        0995
+                     </td>
+                     <td>
+                        <div class="tablePhoto"></div>
+                     </td>
+                     <td>Somsan</td>
+                     <td>II-A</td>
+                     <td>
+                        Anju-9845895850
+                     </td>
+                     <td>
+                        B+
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+   <!-- modal start -->
+   <div class="modal" id="progressBar" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <nav class="navbar d-flex justify-content-center modal_nav_cus">
+               <h3>IMPORT Students</h3>
+            </nav>
+            <div class="container">
+               <div class="row justify-content-center align-items-center modal_content_cus">
+                  <div class="col-lg-12">
+                     <div class="text-center text-clr_1 h4 mb-4">UPLOADING DATA…</div>
+                     <div class="progress border">
+                        <div class="progress-bar progress_clr" style="width:80%"></div>
+                      </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- modal end -->
+
+   <!-- modal -->
+   <div class="modal" id="important" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <nav class="navbar d-flex justify-content-center modal_nav_cus">
+               <h3>IMPORT Students</h3>
+            </nav>
+            <div class="container">
+               <div class="row modal_content_cus">
+                  <div class="col-lg-12">
+                     <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis reprehenderit recusandae
+                        consequatur quibusdam. Quidem molestias vero mollitia porro, ipsam error ipsum expedita, quod
+                        facere iure tempore minus eligendi, autem voluptate?Nulla voluptatibus eum eos commodi dolorem,
+                        asperiores incidunt. Sapiente excepturi tempora adipisci neque commodi? Hic et totam expedita
+                        facilis consequuntur iusto id voluptas magni tempora consectetur, ea neque provident! Sapiente?
+                        <br> <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis reprehenderit recusandae
+                        consequatur quibusdam. Quidem molestias vero mollitia porro, ipsam error ipsum expedita, quod
+                        facere iure tempore minus eligendi, autem voluptate?Nulla voluptatibus eum eos commodi dolorem,
+                        asperiores incidunt. Sapiente excepturi tempora adipisci neque commodi? Hic et totam expedita
+                        facilis consequuntur iusto id voluptas magni tempora consectetur, ea neque provident! Sapiente?
+                        magni tempora consectetur, ea neque provident! Sapiente?
+                     </p>
+                     <div class="modal_button">
+                        <input type="button" class="btn_bb mr-5" id="example" value="Example">
+                        <input type="button" class="btn_bb ml-5" id="upload" value="Upload">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end -->
+   <!-- modal -->
+   <div class="modal" id="upload_error" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <nav class="navbar d-flex justify-content-center modal_nav_cus">
+               <h3>Importing</h3>
+            </nav>
+            <div class="container">
+               <div class="row modal_content_cus justify-content-center align-items-center">
+                  <div class="col-sm-12 col-lg-6">
+                     <span class="h3 text-bold float-left  text-clr_1">Error!</span>
+                     <img src="./Images/small-icon/Danger.svg" class="pl-3" alt="Danger">
+                  </div>
+                  <div class="col-sm-12 col-lg-6">
+                     <input type="button" class="float-right btn_bb" value="Try Again">
+                  </div>
+                  <div class="col-lg-12">
+                     <div class="jumbotron">
+                        <p class="lead text-clr_1">1. C1 has Error, can’t be imported <br>
+                           2. Row 25 has Error, can’t be imported Row 25 has Error, can’t be imported <br>
+                           3. Row 25 has Error, can’t be imported Formula not working, can’t be imported can’t be
+                           imported Formula not working, can’t be imported <br>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end -->
+   <!-- modal -->
+   <div class="modal" id="upload_success" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <nav class="navbar d-flex justify-content-center modal_nav_cus">
+               <h3>Importing</h3>
+            </nav>
+            <div class="container">
+               <div style="margin-top: 50px;" class="row">
+                  <div class="col-sm-12 col-lg-6">
+                     <span class="h3 text-bold float-left  text-clr_1">Success</span>
+                     <img src="./Images/small-icon/Success.svg" class="pl-3" alt="success">
+                  </div>
+                  <div class="col-sm-12 col-lg-6">
+                     <input type="button" class="float-right btn_bb" value="Confirm">
+                  </div>
+               
+           
+                  <div class="col-12">
+                     <table id="table2" class="table table-hover display responsive nowrap" style="width:100%">
+                        <thead>
+                           <tr>
+                              <th>Roll Number</th>
+                              <th>Photo</th>
+                              <th>Full Name</th>
+                              <th>Std</th>
+                              <th>Primary Contact</th>
+                              <th>Blood Group</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>
+                                 #0984
+                              </td>
+                              <td>
+                                 <div class="tablePhoto"></div>
+                              </td>
+                              <td>Rajan</td>
+                              <td>VII-A</td>
+                              <td>
+                                 Anju-9845895850
+                              </td>
+                              <td>
+                                 A+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 #0985
+                              </td>
+                              <td>
+                                 <div class="tablePhoto"></div>
+                              </td>
+                              <td>Somsan</td>
+                              <td>II-A</td>
+                              <td>
+                                 Anju-9845895850
+                              </td>
+                              <td>
+                                 B+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 #0986
+                              </td>
+                              <td>
+                                 <div class="tablePhoto"></div>
+                              </td>
+                              <td>Vijay</td>
+                              <td>VII-A</td>
+                              <td>
+                                 Anju-9845895850
+                              </td>
+                              <td>
+                                 A+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 #0987
+                              </td>
+                              <td>
+                                 <div class="tablePhoto"></div>
+                              </td>
+                              <td>Gopi</td>
+                              <td>II-A</td>
+                              <td>
+                                 Anju-9845895850
+                              </td>
+                              <td>
+                                 B+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 #0988
+                              </td>
+                              <td>
+                                 <div class="tablePhoto"></div>
+                              </td>
+                              <td>Rajan</td>
+                              <td>VII-A</td>
+                              <td>
+                                 Anju-9845895850
+                              </td>
+                              <td>
+                                 A+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 #0989
+                              </td>
+                              <td>
+                                 <div class="tablePhoto"></div>
+                              </td>
+                              <td>Somsan</td>
+                              <td>II-A</td>
+                              <td>
+                                 Anju-9845895850
+                              </td>
+                              <td>
+                                 B+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 #0990
+                              </td>
+                              <td>
+                                 <div class="tablePhoto"></div>
+                              </td>
+                              <td>Rajan</td>
+                              <td>VII-A</td>
+                              <td>
+                                 Anju-9845895850
+                              </td>
+                              <td>
+                                 A+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 #0991
+                              </td>
+                              <td>
+                                 <div class="tablePhoto"></div>
+                              </td>
+                              <td>Somsan</td>
+                              <td>II-A</td>
+                              <td>
+                                 Anju-9845895850
+                              </td>
+                              <td>
+                                 B+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 #0992
+                              </td>
+                              <td>
+                                 <div class="tablePhoto"></div>
+                              </td>
+                              <td>Rajan</td>
+                              <td>VII-A</td>
+                              <td>
+                                 Anju-9845895850
+                              </td>
+                              <td>
+                                 A+
+                              </td>
+                           </tr>
+
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+
+
+         </div>
+      </div>
+   </div>
+   
+   <!-- button for modal start -->
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="btn-group" role="group" aria-label="Basic example">
+               <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#upload_success" >Success</button>
+               <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#upload_error" >Error</button>
+               <button type="button" class="btn btn-info"  data-toggle="modal" data-target="#important">information</button>
+               <button type="button" class="btn btn-light"  data-toggle="modal" data-target="#progressBar">Progress Bars</button>
+             </div>
+         </div>
+
+      </div>
+   </div>
+   <!-- button for  modal end  -->
+   <!-- end -->
+   <footer class="d-flex mt-3 justify-content-center">
+      <p class="copy">Designed & Developed by <span class="font-weight-bold"> Knowhere Studio</span></p>
+   </footer>
+   <!--Scripts lib-->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
+   <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
+   <script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'></script>
+   <script src="./Scripts/master.js"></script>
+</body>
+
+</html>

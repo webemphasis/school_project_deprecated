@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.703" height="60" viewBox="0 0 45.703 60">
+  <g id="Group_52" data-name="Group 52" transform="translate(-1202 -677.558)">
+    <g id="Group_50" data-name="Group 50" transform="translate(1202 677.558)">
+      <path id="Path_53" data-name="Path 53" d="M83.852,0a22.847,22.847,0,0,0-12.3,42.1V58.242A1.758,1.758,0,0,0,74.28,59.7l9.572-6.381L93.423,59.7a1.758,1.758,0,0,0,2.733-1.463V42.1A22.847,22.847,0,0,0,83.852,0Zm8.789,54.958-7.814-5.209a1.758,1.758,0,0,0-1.95,0l-7.814,5.209V43.944a22.839,22.839,0,0,0,17.578,0Zm-8.789-12.77a19.336,19.336,0,1,1,19.336-19.336A19.358,19.358,0,0,1,83.852,42.187Z" transform="translate(-61)" fill="#fff"/>
+    </g>
+    <g id="add-outline" transform="translate(1172.017 565.017)">
+      <g id="Line_1" data-name="Line 1" transform="translate(52.733 128.983)">
+        <path id="Path_54" class="dash_blue_icons"  data-name="Path 54" d="M190.733,143.983a.75.75,0,0,1-.75-.75v-13.5a.75.75,0,0,1,1.5,0v13.5A.75.75,0,0,1,190.733,143.983Z" transform="translate(-189.983 -128.983)" fill="#fff" stroke="#fff" stroke-width="2.5"/>
+      </g>
+      <g id="Line_2" data-name="Line 2" transform="translate(45.983 135.733)">
+        <path id="Path_55" class="dash_blue_icons" data-name="Path 55" d="M60.233,274.483h-13.5a.75.75,0,1,1,0-1.5h13.5a.75.75,0,1,1,0,1.5Z" transform="translate(-45.983 -272.983)" fill="#fff" stroke="#fff" stroke-width="2.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

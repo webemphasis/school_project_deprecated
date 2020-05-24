@@ -1,0 +1,170 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    .navbar-brand{
+      .logo_Rect{
+      margin-left: 10px !important;
+    }
+    }
+    .right-content{
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .mainCard {
+      .pictureCard{
+        margin: 0px 35px;
+        width: 130px;
+        height: 130px
+      }
+    }
+
+    .SchoolPic{
+      display: none;
+    }
+
+    .admissionText{
+      margin-top: -10px;
+    }
+
+    .admissionContainer{
+      .mainfileUpload{
+        margin-left: 0px;
+        margin-right: 0px;
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        padding-left: 0px;
+        width: 100%;
+      }
+      .admissionLeft,
+      .addressInput,
+      .admissionRight{
+        padding-left: 10px;
+        padding-right: 10px;  
+      }
+      .othercerti{
+        padding-left: 0px; 
+    }
+    
+    }
+    .file-input{
+      width: 100%;
+    }
+
+    .dropdown-main{
+      float: left;
+      margin-left: 80px;
+    }
+
+    .modal_content_cus p{
+      padding: 10px 10px;
+    }
+    .modal_button input{
+      margin: 0px;
+    }
+
+    .navbar-light .navbar-brand{
+      margin-left: 0px;
+    }
+
+    // classv
+    .thead1{
+      display: none;
+    }
+    #example > tbody > tr> td > p.chek{
+      display: none;
+    }
+
+  // datalist
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    margin-top: 1rem;
+  }
+  
+  }
+
+  
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) and (max-width: 767px){
+  .SchoolPic{
+    display: none;
+  }
+  .admissionText{
+    margin-top: -10px;
+  }
+
+  .admissionContainer{
+    .mainfileUpload{
+      margin-left: 0px;
+      margin-right: 0px;
+      border-radius: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      -ms-border-radius: 0px;
+      -o-border-radius: 0px;
+      padding-left: 0px;
+      width: 100%;
+    }
+    .othercerti{
+      padding-left: 0px; 
+  }
+  }
+    // classv
+    .thead1{
+      display: none;
+    }
+    #example > tbody > tr> td > p.chek{
+      display: none;
+    }
+  
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) and (max-width: 991px){
+  .SchoolPic{
+    display: none;
+  }
+  .admissionContainer .othercerti{
+    padding-left: 0 !important;
+  }
+     // classv
+     .thead1{
+      display: none;
+    }
+    
+   
+  
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+  .admissionContainer .othercerti{
+    padding-left: 0px !important;
+  }
+
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px){
+// .master .container {
+//       max-width: 1758px !important;
+// }
+.faculty_details .container, 
+.class_V .container{
+        max-width: calc(100% - 160px) !important;
+  }
+}
+
+
+
+// bootstrap modal width
+@media (min-width: 992px){
+.modal-lg {
+    max-width: 80vw !important;
+}
+}

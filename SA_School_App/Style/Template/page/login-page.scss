@@ -1,0 +1,147 @@
+
+ .card-container.card {
+	max-width: 500px;
+	height: 633px;
+	padding: 50px 60px;
+	border-radius: 30px;
+}
+.btn {
+	font-weight: 700;
+	height: 36px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+.mainLogin {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+}
+.SchoolAppPicture {
+	max-width: 983px;
+	height: 633px;
+	opacity: 0.93;
+	background-color: $lightGrey;
+}
+.card {
+	background-color: $white;
+	padding: 20px 25px 30px;
+	margin: 0 auto;
+	border-radius: 2px;
+}
+.profile-name-card {
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.27;
+	letter-spacing: normal;
+	color: $text_dark2;
+}
+
+.form-signin {
+	margin-top: 80px;
+	#inputUser {
+		direction: ltr;
+		height: 44px !important;
+		font-size: 16px;
+	}
+	#inputPassword {
+		direction: ltr;
+		height: 44px !important;
+		font-size: 16px;
+	}
+	input[type=password] {
+		width: 100%;
+		display: block;
+		margin-bottom: 10px;
+		z-index: 1;
+		position: relative;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	input[type=text] {
+		width: 100%;
+		display: block;
+		margin-bottom: 10px;
+		z-index: 1;
+		position: relative;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	button {
+		width: 100%;
+		display: block;
+		margin-bottom: 10px;
+		z-index: 1;
+		position: relative;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.form-control {
+		&:focus {
+			border-color: $formFocusBorderBlue;
+			outline: 0;
+			-webkit-box-shadow: inset 0 1px 1px $formFocusBorderBlack,0 0 8px $formFocusBorderBlue;
+			box-shadow: inset 0 1px 1px $formFocusBorderBlack,0 0 8px $formFocusBorderBlue;
+		}
+	}
+}
+.formselect {
+	direction: ltr;
+	height: 44px !important;
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+#inputUser {
+	margin-bottom: 30px;
+}
+#inputPassword {
+	margin-bottom: 30px;
+}
+.btn.btn-signin {
+	background-color: $text_dark2;
+	padding: 0px;
+	font-weight: 700;
+	font-size: 14px;
+	height: 36px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: none;
+	-o-transition: all 0.218s;
+	-moz-transition: all 0.218s;
+	-webkit-transition: all 0.218s;
+	transition: all 0.218s;
+	margin-top: 180px;
+	&:hover {
+		background-color: $text_dark2 !important;
+	}
+	&:active {
+		background-color: $text_dark2 !important;
+	}
+	&:focus {
+		background-color: $text_dark2 !important;
+	}
+}
+.forgot-password {
+	color: $formFocusBorderBlue;
+	float: right;
+	&:hover {
+		color: $forgot-password;
+	}
+	&:active {
+		color: $forgot-password;
+	}
+	&:focus {
+		color: $forgot-password;
+	}
+}

@@ -1,0 +1,40 @@
+.faculty_details{
+#example_wrapper > div:nth-child(3){
+    background-color: #fff;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 80px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#example_wrapper > div:nth-child(3) > div:first-child{
+    display: none;
+}
+#example > thead > tr > th{
+    padding: 0px !important;
+    padding-top: 50px !important;
+    height: 30px;
+    text-align: center; 
+}
+#example > tbody > tr:first-child td {
+    border-top: 0.1px solid $grey3;
+} 
+
+#example > tbody > tr td {
+    border-bottom: 0.1px solid $grey3;
+} 
+
+#example > tbody > tr {
+    text-align: center;
+    height: 80px;
+}
+#example_paginate > ul > li > a{
+    color: $gray1 !important;
+}
+
+}    
+
+

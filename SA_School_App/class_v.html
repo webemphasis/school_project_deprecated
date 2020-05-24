@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css'>
+      <link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="Style/Main.css">
+      <title>SA School App</title>
+   </head>
+   <body class="master class_V">
+      <!-- nav bar 1  start-->
+      <header class="mainHeader">
+         <nav class="navbar navbar-light bg-light navCus1">
+            <a class="navbar-brand" href="#">
+               <div class="logo_Rect">
+                  SA
+               </div>
+               <span class="text">School App</span>
+            </a>
+            <div>
+               <div class="right-content d-flex  justify-content-between">
+                  <div class="float-left text-center">
+                     <span>Jone Aly</span><br>
+                     <span>Admin</span>
+                  </div>
+                  <div>
+                     <a class="float-right mt-2" href="#">
+                        <div class="arrow arrow-bottom myArrow">
+                           <ul class="log_dropdown">
+                              <li>
+                     <a href="">Text1</a></li>
+                     <li><a href="">Text2</a></li>
+                     <li><a href="">Text3</a></li>
+                     <li><a href="">Logout</a></li>
+                     </ul>
+                     </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </nav>
+         <!-- nav bar 1  end-->
+         <!-- nav bar 2  start-->
+         <nav class="navbar navbar-expand-md navbar-light bg-light navCus2">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+               <div class="navigationPath">
+                  <a href="#"><span class="navArrow arrow-bar is-left"></span></a>
+                  <ul class="path">
+                     <li><a href="#">Main</a></li>
+                     <li><a href="#">Class & Group</a></li>
+                     <li><a href="#">Group</a></li>
+                     <li><a href="#">Primary</a></li>
+                     <li><a href="#" class="active">Classes</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="mx-auto order-0">
+               <div class="navbar-brand mx-auto">
+                  <h1 class="admissionText">Class V</h1>
+               </div>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+               <ul class="navbar-nav ml-auto">
+               </ul>
+            </div>
+         </nav>
+         <!-- nav bar 2  end-->
+      </header>
+      <div class="container">
+         <div class="row mt-5">
+            <div class="col-sm-12 col-lg-12 ">
+               <input type="button" class="btn_bb" value="Add Faculty">
+               <a class="ml-3" href="#">
+               <img src="./Images/small-icon/Add.svg" alt="Add">
+               </a>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- main container custom_container start -->
+      <div class="container"> 
+         <!-- row start -->
+         <div class="row py-5">
+            <div class="col-12"> 
+               <!-- thead1 start -->
+               <div class="thead1">
+                  <div class="row">
+                     <div class=" col-sm-12 col-lg-3">
+                        <p id="Subject_btn" class="tab-text tab-text-active">Subject</p>
+                     </div>
+                     <div class="col-sm-12 col-lg-3">
+                        <p id="feesStructure_btn" id class="tab-text">Fees Structure</p>
+                     </div>
+                     <div class="col-sm-12 col-lg-3">
+                        <p id="timeTable_btn" class="tab-text">Time Table</p>
+                     </div>
+                     <div class="col-sm-12 col-lg-3">
+                        <p id="students_btn" class="tab-text">Students</p>
+                     </div>
+                  </div>
+                  <div class="slider_bg">
+                     <div id="slider" class="slider"></div>
+                  </div>
+               </div>
+               <!-- thead1 end -->
+               <!-- sub_menu1 start -->
+               <div class="thead2 sub_menu1" >
+                  <input type="button" class="btn_bb mt-2 mr-5" data-toggle="modal" data-target="#Newcomponent" value="NEW COMPONENT">
+               </div>
+               <!-- sub_menu1 end -->
+               <!-- sub_menu2 start -->
+               <div class="thead2 sub_menu2 ">
+                  <input type="button" class="btn_bb mt-2 mr-5" value="ADD SUBJECT">
+               </div>
+               <!-- sub_menu2 end -->
+               <!-- sub_menu3 start -->
+               <div class="thead2 sub_menu3 ">
+                  <input type="button" class="btn_bb mt-2 mr-5" value="CONFIGURE WORKING DAYS">
+               </div>
+               <!-- sub_menu3 end -->
+
+               <!-- thead3 start -->
+               <div class="thead3"> 
+                  <!-- Subject_tab start -->
+                  <div id="Subject_tab">
+                     <!-- -->
+                     <table id="example"class="display tb_1 table table-hover responsive nowrap"  style="width:100%">
+                        <thead>
+                           <tr>
+                              <th style="width: 50px"></th>
+                              <th>Subject Name</th>
+                              <th>Description</th>
+                              <th>Teacher</th>
+                              <th>Subject Type</th>
+                              <th>Action</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek_1" checked />
+                                    <label for="chek_1"></label>
+                                 </p>
+                              </td>
+                              <td>SCIENCE</td>
+                              <td>
+                                 <p>
+                                    is simply dummy text of the printing and <br>
+                                    typesetting industry Lorem Ipsum has been <br> 
+                                    since the 1500s, when an unknown <br>
+                                 </p>
+                              </td>
+                              <td>RAJAN</td>
+                              <td>
+                                 LESSON 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek_2" checked />
+                                    <label for="chek_2"></label>
+                                 </p>
+                              </td>
+                              <td>MATHS</td>
+                              <td>
+                                 <p>
+                                    is simply dummy text of the printing and <br>
+                                    typesetting industry Lorem Ipsum has been <br> 
+                                    since the 1500s, when an unknown <br>
+                                 </p>
+                              </td>
+                              <td>RAJAN</td>
+                              <td>
+                                 LESSON 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek_3" checked />
+                                    <label for="chek_3"></label>
+                                 </p>
+                              </td>
+                              <td>PHYSICS</td>
+                              <td>
+                                 <p>
+                                    is simply dummy text of the printing and <br>
+                                    typesetting industry Lorem Ipsum has been <br> 
+                                    since the 1500s, when an unknown <br>
+                                 </p>
+                              </td>
+                              <td>RAJAN</td>
+                              <td>
+                                 LESSON 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek_4" checked />
+                                    <label for="chek_4"></label>
+                                 </p>
+                              </td>
+                              <td>PHYSICS</td>
+                              <td>
+                                 <p>
+                                    is simply dummy text of the printing and <br>
+                                    typesetting industry Lorem Ipsum has been <br> 
+                                    since the 1500s, when an unknown <br>
+                                 </p>
+                              </td>
+                              <td>RAJAN</td>
+                              <td>
+                                 LESSON 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek_5" checked />
+                                    <label for="chek_5"></label>
+                                 </p>
+                              </td>
+                              <td>PHYSICS</td>
+                              <td>
+                                 <p>
+                                    is simply dummy text of the printing and <br>
+                                    typesetting industry Lorem Ipsum has been <br> 
+                                    since the 1500s, when an unknown <br>
+                                 </p>
+                              </td>
+                              <td>RAJAN</td>
+                              <td>
+                                 LESSON
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek_6" checked />
+                                    <label for="chek_6"></label>
+                                 </p>
+                              </td>
+                              <td>PHYSICS</td>
+                              <td>
+                                 <p>
+                                    is simply dummy text of the printing and <br>
+                                    typesetting industry Lorem Ipsum has been <br> 
+                                    since the 1500s, when an unknown <br>
+                                 </p>
+                              </td>
+                              <td>RAJAN</td>
+                              <td>
+                                 LESSON
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek_7" checked />
+                                    <label for="chek_7"></label>
+                                 </p>
+                              </td>
+                              <td>PHYSICS</td>
+                              <td>
+                                 <p>
+                                    is simply dummy text of the printing and <br>
+                                    typesetting industry Lorem Ipsum has been <br> 
+                                    since the 1500s, when an unknown <br>
+                                 </p>
+                              </td>
+                              <td>RAJAN</td>
+                              <td>
+                                 LESSON
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek_8" />
+                                    <label for="chek_8"></label>
+                                 </p>
+                              </td>
+                              <td>MATHS</td>
+                              <td>
+                                 <p>
+                                    is simply dummy text of the printing and <br>
+                                    typesetting industry Lorem Ipsum has been <br> 
+                                    since the 1500s, when an unknown <br>
+                                 </p>
+                              </td>
+                              <td>RAJAN</td>
+                              <td>
+                                 LESSON
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek_9" />
+                                    <label for="chek_9"></label>
+                                 </p>
+                              </td>
+                              <td>PHYSICS</td>
+                              <td>
+                                 <p>
+                                    is simply dummy text of the printing and <br>
+                                    typesetting industry Lorem Ipsum has been <br> 
+                                    since the 1500s, when an unknown <br>
+                                 </p>
+                              </td>
+                              <td>RAJAN</td>
+                              <td>
+                                 LESSON
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <!-- modal New Components start -->
+                     <div class="modal" id="Newcomponent" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                           <div class="modal-content">
+                              <nav class="navbar d-flex justify-content-center align-items-center modal_nav_cus">
+                                 <h3>NEW COMPONENT</h3>
+                              </nav>
+                              <div class="container">
+                                 <!-- row start -->
+                                 <div class="row modal_classv_cus">
+                                    <div class="col-sm-12 col-lg-6">
+                                       <div class="form-group">
+                                          <label for="componentName">COMPONENT NAME</label>
+                                          <input type="text" id="componentName" class="form-control" placeholder="Component Name">
+                                       </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-6">
+                                       <div class="form-group">
+                                          <label for="applicableFor">APPLICABLE FOR</label>
+                                          <select class="form-control" id="applicableFor" value="3asa">
+                                             <option>OLD STUDENT</option>
+                                             <option>NEW STUDENT</option>
+                                          </select>
+                                       </div>  
+                                    </div>
+                                 </div> <!-- row end -->
+                                 <!-- row start -->
+                                 <div class="row modal_classv_cus modal_classv_cus2">
+                                    <div class="col-sm-12 col-lg-6">
+                                       <div class="form-group">
+                                          <label for="componentAmount">Amount</label>
+                                          <input type="text" id="componentAmount" class="form-control" placeholder="Amount">
+                                       </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-6">
+                                       <div class="form-group">
+                                          <label for="selectOptional">Optional</label>
+                                          <select class="form-control" id="selectOptional" value="3asa">
+                                             <option>YES</option>
+                                             <option>NO</option>
+                                          </select>
+                                       </div>  
+                                    </div>
+                                 </div> <!-- row end -->
+                                 <div class="row mt-5 d-flex justify-content-center align-items-center">
+                                    <input type="button" id="add_component" value="Submit"> 
+                                 </div>
+
+                              </div>
+                           </div>
+                        </div>
+                     </div> <!-- modal New Component end -->
+                     
+                  </div>
+                  <!-- Subject_tab end -->
+                  <!-- freeStructure_tab start -->
+                  <div id="freeStructure_tab">
+                     <!--  id="example" -->
+                     <table id="example" class="display table table-hover responsive nowrap"  style="width:100%">
+                        <thead>
+                           <tr>
+                              <th></th>
+                              <th>COMPONENT NAME</th>
+                              <th>APPLICABLE FOR</th>
+                              <th>Optional</th>
+                              <th>AMOUNT</th>
+                              <th>Action</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek1" checked />
+                                    <label for="chek1"></label>
+                                 </p>
+                              </td>
+                              <td>Non Teaching</td>
+                              <td>New Students</td>
+                              <td>9790457855</td>
+                              <td>
+                                 abc123@gmail.com 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek2" checked />
+                                    <label for="chek2"></label>
+                                 </p>
+                              </td>
+                              <td>Non Teaching</td>
+                              <td>New Students</td>
+                              <td>9790457855</td>
+                              <td>
+                                 abc123@gmail.com 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek3" checked />
+                                    <label for="chek3"></label>
+                                 </p>
+                              </td>
+                              <td>Non Teaching</td>
+                              <td>New Students</td>
+                              <td>9790457855</td>
+                              <td>
+                                 abc123@gmail.com 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek4" checked />
+                                    <label for="chek4"></label>
+                                 </p>
+                              </td>
+                              <td>Non Teaching</td>
+                              <td>New Students</td>
+                              <td>9790457855</td>
+                              <td>
+                                 abc123@gmail.com 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek5" checked />
+                                    <label for="chek5"></label>
+                                 </p>
+                              </td>
+                              <td>Non Teaching</td>
+                              <td>New Students</td>
+                              <td>9790457855</td>
+                              <td>
+                                 abc123@gmail.com 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek6" checked />
+                                    <label for="chek6"></label>
+                                 </p>
+                              </td>
+                              <td>Non Teaching</td>
+                              <td>New Students</td>
+                              <td>9790457855</td>
+                              <td>
+                                 abc123@gmail.com 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek7" checked />
+                                    <label for="chek7"></label>
+                                 </p>
+                              </td>
+                              <td>Non Teaching</td>
+                              <td>New Students</td>
+                              <td>9790457855</td>
+                              <td>
+                                 abc123@gmail.com 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek8" />
+                                    <label for="chek8"></label>
+                                 </p>
+                              </td>
+                              <td>Non Teaching</td>
+                              <td>New Students</td>
+                              <td>9790457855</td>
+                              <td>
+                                 abc123@gmail.com 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p class="chek">
+                                    <input type="checkbox" id="chek9" />
+                                    <label for="chek9"></label>
+                                 </p>
+                              </td>
+                              <td>Non Teaching</td>
+                              <td>New Students</td>
+                              <td>9790457855</td>
+                              <td>
+                                 abc123@gmail.com 
+                              </td>
+                              <td>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Edit.svg" alt="Edit">
+                                 </a>
+                                 <a href="#">
+                                 <img src="./Images/small-icon/Remove.svg" alt="Edit">
+                                 </a>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <!-- freeStructure_tab end -->
+                  <!-- timeTable_tab start  -->
+                  <div id="timeTable_tab">
+                     <div class="timetable_main">
+                        <!-- Days -->
+                        <div>
+                          <div class="d-flex flex-row bd-highlight">
+                            <div class="bd-highlight timetable-box">
+                              Monday
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              English 
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              Maths
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              Science I
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              Science I
+                            </div>  
+                            <div class="bd-highlight lunch timetable-box">
+                              LUNCH
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              Science II
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              History
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              Geography
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              P E T
+                            </div>         
+                          </div>       
+                        </div> 
+                        <div>
+                          <div class="d-flex flex-row bd-highlight">
+                            <div class="bd-highlight timetable-box">
+                              Tuesday
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>  
+                            <div class="bd-highlight lunch timetable-box">
+                              LUNCH
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>         
+                          </div>       
+                        </div> 
+                        <div>
+                          <div class="d-flex flex-row bd-highlight">
+                            <div class="bd-highlight  timetable-box">
+                              Wednesday
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>  
+                            <div class="bd-highlight lunch timetable-box">
+                              LUNCH
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>         
+                          </div>       
+                        </div> 
+                        <div>
+                          <div class="d-flex flex-row bd-highlight">
+                            <div class="bd-highlight timetable-box">
+                              Thursday
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>  
+                            <div class="bd-highlight lunch timetable-box">
+                              LUNCH
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>         
+                          </div>       
+                        </div> 
+                        <div >
+                          <div class="d-flex flex-row bd-highlight">
+                            <div class="bd-highlight timetable-box">
+                              Friday
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>  
+                            <div class="bd-highlight lunch timetable-box">
+                              LUNCH
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>         
+                          </div>       
+                        </div> 
+                        <div >     
+                        </div> 
+                           <div >
+                          <div class="d-flex flex-row bd-highlight">
+                            <div class="bd-highlight  timetable-box">
+                              Saturday
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>  
+                            <div class="bd-highlight lunch timetable-box">
+                              LUNCH
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div> 
+                            <div class="bd-highlight subjects timetable-box">
+                              
+                            </div>         
+                          </div>       
+                        </div>  
+                      </div>
+
+                     <div class="dialog_box" id="add_subject">
+                        <div id="dialog_close" class="dialog_close float-right mr-2">
+                           X
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="container-fluid mt-5">
+                           <input type="text" id="add_schedule" class="add_Subject ml-2" placeholder="Add Subject">
+                        </div>
+                        <div class="container-fluid d-flex justify-content-between mt-4 pl-5 pr-5">
+                           <span><input type="time" class="time_schedule" name="appt" min="09:00" max="18:00" value="10:30" required></span>
+                           <span>-</span>
+                           <span><input type="time" class="time_schedule" name=" appt" min="09:00" max="18:00" value="11:30" required></span>
+                        </div>
+                        <div class="container-fluid d-flex justify-content-center mt-4">
+                           <input type="button" id="save_schedule" class="dialog_save_btn" value="SAVE">
+                        </div>
+                     </div>
+                     <!-- dialog end -->
+                  </div>
+                  <!-- timeTable_tab start  -->
+               </div>  <!-- thead3 end -->
+            </div>
+         </div> <!-- row start -->
+      </div> <!-- main container custom_container end -->
+      
+      <!-- main container custom_container start -->
+      <footer class="d-flex mt-3 justify-content-center">
+         <p class="copy">Designed & Developed by <span class="font-weight-bold"> Knowhere Studio</span></p>
+      </footer>
+      <!--Scripts lib-->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
+      <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
+      <script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'></script>
+      <script  src="./Scripts/classv.js"></script>
+   </body>
+</html>

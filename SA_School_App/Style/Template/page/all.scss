@@ -1,0 +1,137 @@
+html{
+  font-size: 0.8333rem
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    // display: flex;
+    // flex-direction: column;
+}
+
+body.dashboard{
+ background-color: $bg_color; 
+ 
+}
+
+// .mainHeader{
+//   flex: 1 0 auto;
+// }
+
+// custom navbar
+.navCus1{
+    background-color: $navbar_white !important;
+    height: 90px;
+
+    .myArrow{
+      position: relative;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .log_dropdown{
+      position: absolute;
+      left: -40px;
+      top: 51px;
+      z-index: 9999;
+      list-style: none;
+      background-color: $white;
+      width: 120px;
+      text-align: left;
+      padding: 0px;
+      @include shadow1;
+      display: none;      
+    }
+    .log_dropdown li{
+     margin-bottom: 5px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     border-bottom: 1px solid $border;
+    }
+    .log_dropdown li:last-child{
+      border-bottom: none;
+    }
+    .log_dropdown li a{
+      color: $text_dark1;
+      text-decoration: none;
+      padding: 10px 0px 0px 10px;
+    }
+}
+
+
+
+.navCus2{
+  background-color: $navbar_color2 !important;
+  height: 67px;
+  z-index: 1;
+}
+.navbar-brand{
+.logo_Rect {
+  @include mainLogo;
+  @include shadow1;
+  margin-left: 74px; 
+  font-weight: 600;
+}
+.text{
+  @include logoText;
+}
+}
+
+.navbar{ 
+  ul.path{
+  margin-top: 10px;
+  list-style: none;
+  position: relative;
+  padding: 0px;
+  margin-left: 4px;
+  }
+  ul.path li:first-child{
+      margin: 0px;
+  }
+  ul.path li{
+      display: inline-block;
+      margin-left: 30px;
+  
+  }
+  ul.path li:after{
+     content: '';
+     position: absolute;
+     border-right:1px solid $arrow_color;
+     border-bottom:1px solid $arrow_color;
+     width:10px;
+     height:10px;
+     top: -1px;
+     margin-left: 10px;
+     transform: translateY(100%) rotate(-45deg);
+     -webkit-transform: translateY(100%) rotate(-45deg);
+     -moz-transform: translateY(100%) rotate(-45deg);
+     -ms-transform: translateY(100%) rotate(-45deg);
+     -o-transform: translateY(100%) rotate(-45deg);
+  }
+  ul.path li:last-child::after{
+      position: relative; 
+      border: none;
+      z-index: 999;
+  }
+  ul.path li a{
+      color: $text_dark2;
+      font-size: calc(1rem + 0.1vw);
+    
+  }
+  ul.path li a:hover{
+      text-decoration: none;
+    
+  }
+  }
+
+// navbar right side
+.right-content{
+  margin-right: 56px;
+  width: 110px;
+  color: $text_dark1;
+  font-size: calc(1rem + 0.1vw);
+}
+
+.navbar-light .navbar-brand{
+  margin-left: -52px;
+}

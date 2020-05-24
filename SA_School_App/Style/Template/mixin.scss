@@ -1,0 +1,167 @@
+// mainLogo
+
+@mixin mainLogo {
+    width: 39px;
+    height: 39px;
+    border-radius: 10px;
+    background-color: #427afc;
+    padding: 5px 7px;
+    display: inline-block;
+    color: $text_white;
+}
+@mixin logoText{
+  font-weight: 600;
+  color: #949ea7;
+  margin-left: 8px;
+}
+
+@mixin shadow1 {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+@mixin shadow2{
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+//*****************Navigation arrow start*******************************//
+    // css class
+    // class="navArrow arrow-bar is-top"
+    // class="navArrow arrow-bar is-right"
+    // class="navArrow arrow-bar is-bottom"
+    // class="navArrow arrow-bar is-left"
+    // class="navArrow is-top"
+    // class="navArrow is-right"
+    // class="navArrow is-bottom"
+    // class="navArrow is-left"
+    // class="navArrow is-triangle arrow-bar is-top"
+    // class="navArrow is-triangle arrow-bar is-right"
+    // class="navArrow is-triangle arrow-bar is-bottom"
+    // class="navArrow is-triangle arrow-bar is-left"
+    // class="navArrow is-triangle is-top"
+    // class="navArrow is-triangle is-right"
+    // class="navArrow is-triangle is-bottom"
+    // class="navArrow is-triangle is-left"
+    // class="navArrow is-check is-bottom" 
+
+@mixin rotate($angle) {
+  -moz-transform: rotate($angle);
+  -ms-transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+  transform: rotate($angle);
+}
+
+@mixin navArrow($arrowSize: 20px, $arrowBorderSize: 3px, $arrowBarWidth: 2px, $arrowBarHeight: 25px) {
+  display: inline-block;
+  height: $arrowSize;
+  position: relative;
+  width: $arrowSize;
+
+  &::after {
+    border-bottom-style: solid;
+    border-bottom-width: $arrowBorderSize;
+    border-right-style: solid;
+    border-right-width: $arrowBorderSize;
+    content: '';
+    display: inline-block;
+    height: $arrowSize;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $arrowSize;
+  }
+
+  // Triangle shape state
+  &.is-triangle::after {
+    border-style: solid;
+    border-width: 0 0 $arrowSize $arrowSize;
+    height: 0;
+    width: 0;
+  }
+  
+  // Check shape state
+  &.is-check::after {
+    width: $arrowSize / 2;
+  }
+
+  // Arrow Bar
+  &.arrow-bar::before {
+    bottom: 1px;
+    content: '';
+    height: $arrowBarHeight;
+    position: absolute;
+    right: 0;
+    transform-origin: bottom;
+    width: $arrowBarWidth;
+    @include rotate(-45deg);
+  }
+
+  // States
+  &.is-top {
+    @include rotate(225deg);
+  }
+
+  &.is-right {
+    @include rotate(315deg);
+  }
+
+  &.is-bottom {
+    @include rotate(45deg);
+  }
+
+  &.is-left {
+    @include rotate(135deg);
+  }
+}
+
+@mixin arrowColor($color) {
+  &,
+  .navArrow {
+    &::after {
+      border-color: $color;
+    }
+
+    &.is-triangle::after {
+      border-color: transparent;
+      border-bottom-color: $color;
+    }
+
+    &::before {
+      background-color: $color;
+    }
+  }
+}
+
+//*******************Navigation arrow end********************************// 
+
+
+// Admission text
+@mixin HeadingText($size){
+opacity: 0.9;
+font-size: $size ;
+font-weight: 600;
+line-height: 1.43;
+letter-spacing: normal;
+color: $text_dark2;
+}
+
+// paddingLeftRight
+@mixin paddingLR($left, $right) {
+  padding-left: $left;
+  padding-right: $right;
+}
+
+// grey big buton
+/********************** start **************/
+// width height color radius
+@mixin button_bb( $width, $height, $radius, $bgcolor, $color) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  background-color: $bgcolor;
+  color: $color;
+}

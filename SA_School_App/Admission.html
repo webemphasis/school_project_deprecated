@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="Style/Main.css">
+      <title>SA School App</title>
+   </head>
+   <body class="dashboard">
+      <!-- nav bar 1  start-->
+      <header class="mainHeader">
+         <nav class="navbar navbar-light bg-light navCus1">
+            <a class="navbar-brand" href="#">
+               <div class="logo_Rect">
+                  SA
+               </div>
+               <span class="text">School App</span>
+            </a>
+            <div>
+               <div class="right-content d-flex  justify-content-between">
+                  <div class="float-left text-center">
+                     <span>Jone Aly</span><br>
+                     <span>Admin</span>
+                  </div>
+                  <div>
+                     <a class="float-right mt-2" href="#">
+                        <div class="arrow arrow-bottom myArrow">
+
+                           <ul class="log_dropdown">
+                             <li><a href="">Text1</a></li>
+                             <li><a href="">Text2</a></li>
+                             <li><a href="">Text3</a></li>
+                             <li><a href="">Logout</a></li>
+                           </ul>
+               
+                         </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </nav>
+         <!-- nav bar 1  end-->
+         <!-- nav bar 2  start-->
+         <nav class="navbar navbar-expand-md navbar-light bg-light navCus2">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+               <div class="navigationPath">
+                  <a href="./students.html"><span class="navArrow arrow-bar is-left"></span></a>
+                  <ul class="path">
+                     <li> <a href="./Dashboard.html">Main</a></li>
+                     <li><a href="./students.html">Students</a></li>
+                     <li><a href="#" class="active">Admission</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="mx-auto order-0">
+               <div class="navbar-brand mx-auto">
+                  <h1 class="admissionText">Admission</h1>
+               </div>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+               <ul class="navbar-nav ml-auto">
+               </ul>
+            </div>
+         </nav>
+         <!-- nav bar 2  end-->
+      </header>
+      <section class="container-fluid admission_main">
+         <div class="row justify-content-center  align-items-center">
+            <div class="innerWrapper">
+               <div class="container-fluid">
+                <form>
+                  <div class="row mt-2 justify-content-center ">
+                     <h5 class="AdmissionText2">STUDENT INFORMATION</h5>
+                  </div>
+                  <div class="row mt-2 justify-content-center studentsApplication ">
+                     <h5 class="AdmissionText3">APPLICATION NO #0959</h5>
+                  </div>
+                  <div class="row mt-5 justify-content-center">
+                     <a href="#" class="profileImg">
+                     <img src="./Images/admission/Profile.svg" alt="Profile">
+                     <img src="./Images/admission/camera.svg" alt="camera">
+                     </a>
+                  </div>
+                  <div class="admissionContainer">
+                     <!-- row start -->
+                     
+                     <div class="row ">
+                        <!--set 1  -->
+                        <div class="col-xl-6 admissionLeft">
+                           <div class="form-group">
+                              <label for="firstName">FIRST NAME</label>
+                              <input type="text" id="firstName" class="form-control" placeholder="FIRST NAME">
+                           
+                              <label for="gender">GENDER</label>
+                              <select class="custom-select" class="gender-select" id="gender" value="3asa">
+                                 <option>MALE</option>
+                                 <option>FEMALE</option>
+                              </select>
+                          
+                              <label for="cast">CAST</label>
+                              <input type="text" id="cast" class="form-control" placeholder="CAST">
+                           </div>
+                        </div>
+                        <!-- set 1 end -->
+                        <!--set 2  -->
+                        <div class="col-xl-6 admissionRight">
+                           <div class="form-group">
+                              <label for="LastName">LAST NAME</label>
+                              <input type="text" id="LastName" name="LastName" class="form-control" placeholder="LAST NAME">
+                           </div>
+                           <div class="form-group data-outer">
+                              <label for="formGroupExampleInput">Date OF BIRTH</label>
+                              <input data-date-format="dd/mm/yyyy" class="form-control"  id="datepicker">
+                              <span class="data-calendar"><img class="birth_date" src="./Images/small-icon/Calendar.svg" alt="calendar"></span>
+                           </div>
+                           <div class="form-group">
+                              <label for="Religion">RELIGION</label>
+                              <input type="text" id="Religion" name="Religion" class="form-control" placeholder="RELIGION">
+                           </div>
+                        </div>
+                        <!--set 2 end -->
+                     </div>
+                     <!-- row end -->
+                     <!-- hr -->
+                     <div class="row">
+                        <div class="col-xl-12 admissionhr">
+                           <hr>
+                        </div>
+                     </div>
+                     <!-- row start -->
+                     <div class="row">
+                        <div class="col-xl-12 addressInput">
+                           <div class="form-group">
+                              <label for="InputAddress">ADDRESS</label>
+                              <input type="text" class="form-control" id="InputAddress" aria-describedby="emailHelp" placeholder="YOUR ADDRESS">
+                              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- row end -->
+                     <!-- row start -->
+                     <div class="row ">
+                        <!--set 1  -->
+                        <div class="col-xl-6 admissionLeft">
+                           <div class="form-group">
+                              <label for="addressLine">ADDRESS LINE</label>
+                              <input type="text" id="addressLine" class="form-control" placeholder="ADDRESS LINE">
+                           </div>
+                           <div class="form-group">
+                              <label for="city">CITY</label>
+                              <input type="text" id="city" class="form-control" placeholder="CITY">
+                           </div>
+                        </div>
+                        <!-- set 1 end -->
+                        <!--set 2  -->
+                        <div class="col-xl-6 admissionRight">
+                           <div class="form-group">
+                              <label for="state">SELECT STATE</label>
+                              <select class="form-control" id="state" value="3asa">
+                                 <option>XXX</option>
+                                 <option>XXX</option>
+                              </select>
+                           </div>
+                           <div class="form-group">
+                              <label for="country">SELECT COUNTRY</label>
+                              <select class="form-control" id="country" value="3asa">
+                                 <option>XXX</option>
+                                 <option>XXX</option>
+                              </select>
+                           </div>
+                        </div>
+                        <!--set 2 end -->
+                     </div>
+                     <!-- row end -->
+                     <!-- hr -->
+                     <div class="row">
+                        <div class="col-xl-12 admissionhr">
+                           <hr>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-xl-12 addressInput">
+                           <div class="form-group">
+                              <label for="CurrentSchool">CURRENT SCHOOL</label>
+                              <input type="text" class="form-control" id="CurrentSchool" aria-describedby="emailHelp" placeholder="SCHOOL NAME">
+                              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                           </div>
+                        </div>
+                        <div class="col-xl-12 addressInput">
+                           <div class="form-group">
+                              <label for="state">GRADE APPLYING FOR</label>
+                              <select class="form-control" id="state" value="3asa">
+                                 <option>XXX</option>
+                                 <option>XXX</option>
+                              </select>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- row end -->
+                     <!-- hr -->
+                     <div class="row">
+                        <div class="col-xl-12 admissionhr">
+                           <hr>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-xl-12 addressInput cmrl">
+                           <p>RESIDING WITH</p>
+                           <div class="form-check form-check-cus1">
+                              <input class="form-check-input" type="radio" name="exampleRadios"  id="parents" value="option1" onchange="valueChanged()" checked>
+                              <label class="form-check-label" for="parents">
+                              PARENTS
+                              </label>
+                           </div>
+                           <div class="form-check form-check-cus2">
+                              <input class="form-check-input" type="radio" name="exampleRadios" onchange="valueChanged()" id="guardian" value="option1">
+                              <label class="form-check-label" for="guardian">
+                              GUARDIAN
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row parent">
+                        <!--set 1  -->
+                        <div class="col-xl-6 admissionLeft">
+                           <div class="form-group">
+                              <label for="fatherName">FATHER NAME</label>
+                              <input type="text" id="fatherName" class="form-control" placeholder="FATHER NAME">
+                           </div>
+                           <div class="form-group">
+                              <label for="motherName">MOTHER NAME</label>
+                              <input type="text" id="motherName" class="form-control" placeholder="MOTHER NAME">
+                           </div>
+                           <div class="form-group">
+                              <label for="fatherPhoneNumber">FATHER PHONE NUMBER</label>
+                              <input type="tel" id="fatherPhoneNumber" class="form-control" placeholder="9891873223">
+                           </div>
+                        </div>
+                        <!-- set 1 end -->
+                        <!--set 2  -->
+                        <div class="col-xl-6 admissionRight">
+                           <div class="form-group select_state">
+                              <label for="fatherLastName"></label>
+                              <input type="text" id="fatherLastName" class="form-control" placeholder="LAST NAME">
+                           </div>
+                           <div style="margin-top: 28px;" class="form-group">
+                              <label for="motherLastName"></label>
+                              <input type="text" id="motherLastName" class="form-control" placeholder="LAST NAME">
+                           </div>
+                           <div class="form-group">
+                              <label for="motherPhone">MOTHER PHONE NUMBER</label>
+                              <input type="tel" id="motherPhone" class="form-control" placeholder="989232344">
+                           </div>
+                        </div>
+                        <!--set 2 end -->
+                        <div class="col-xl-12 addressInput">
+                          <div class="form-group">
+                             <label for="language">WHAT LANGUAGE DOES YOUR CHILD SPEAK AT HOME?</label>
+                             <select class="form-control" id="language">
+                                <option>XXX</option>
+                                <option>XXX</option>
+                             </select>
+                          </div>
+                       </div>
+                     </div>
+
+
+                     <div class="row guardian">
+                      <!--set 1  -->
+                      <div class="col-xl-6 admissionLeft">
+                         <div class="form-group">
+                            <label for="guardianName">GUARDIAN NAME</label>
+                            <input type="text" id="guardianName" class="form-control" placeholder="">
+                         </div>
+                         <div class="form-group">
+                            <label for="guardianNum">GUARDIAN PRIMARY PHONE NUMBER</label>
+                            <input type="tel" id="guardianNum" class="form-control" placeholder="234324324">
+                         </div>
+                      </div>
+                      <!-- set 1 end -->
+                      <!--set 2  -->
+                      <div class="col-xl-6 admissionRight">
+                         <div style="margin-top: 8px;" class="form-group">
+                            <label for="guardianLastName"></label>
+                            <input type="text" id="guardianLastName" class="form-control" placeholder="LAST NAME">
+                         </div>
+                         <div class="form-group">
+                            <label for="guardianNum2">GUARDIAN SECONDARY PHONE NUMBER</label>
+                            <input type="text" id="guardianNum2" class="form-control" placeholder="LAST NAME">
+                         </div>
+                      </div>
+                      <!--set 2 end -->
+                      <div class="col-xl-12 addressInput">
+                        <div class="form-group">
+                           <label for="language">WHAT LANGUAGE DOES YOUR CHILD SPEAK AT HOME?</label>
+                           <select class="form-control" id="language">
+                              <option>XXX</option>
+                              <option>XXX</option>
+                           </select>
+                        </div>
+                     </div>
+                   </div>
+                     
+                     
+                     
+                     <div class="row">
+                        <div class="col-xl-12 admissionhr">
+                           <hr>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <!--set 1  -->
+                        <div class="col-xl-6 admissionLeft">
+                           <div class="form-group">
+                              <label for="sb1">SIBILING #1 NAME</label>
+                              <input type="text" id="sb1" class="form-control" placeholder="SIBILING NAME">
+                           </div>
+                           <div class="form-group">
+                              <label for="sb3">SIBILING #3 NAME</label>
+                              <input type="text" id="sb3" class="form-control" placeholder="SIBILING NAME">
+                           </div>
+                        </div>
+                        <!-- set 1 end -->
+                        <!--set 2  -->
+                        <div class="col-xl-6 admissionRight">
+                           <div class="form-group">
+                              <label for="sb2">SIBILING #2 NAME</label>
+                              <input type="text" id="sb2" class="form-control" placeholder="SIBILING NAME">
+                           </div>
+                           <div class="form-group">
+                              <label for="sb4">SIBILING #4 NAME</label>
+                              <input type="text" id="sb4" class="form-control" placeholder="SIBILING NAME">
+                           </div>
+                        </div>
+                        <!--set 2 end -->
+                     </div>
+                     <div class="row mainfileUpload">
+                        <div class="col-xl-6">
+                           <div class="form-group">
+                              <label for="uploadTransfer">UPLOAD YOUR TRANSFER CERTIFICATE</label>
+                              <div class='file-input file-input-single'>
+                                 <input type='file'>
+                                 <span class='button'>Choose</span>
+                                 <span class='label' data-js-label>No file selected</label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6">
+                           <label for="uploadTransfer">OTHER CERTIFICATES</label>
+                           <div class='file-input'>
+                            <input type="file" id="upload" multiple>
+                            <span class='button'>Choose</span>
+                            <span class='label files'>
+                              <ul class="list-group multi-loaded list-group-flush">
+                                
+                              </ul>
+                            </span>
+                         </div>
+                        </div>
+                     </div> <!-- row end-->
+                     <div class="row">
+                      <div class="col-xl-12 admissionLeft"> 
+                        <div class="form-group data-outer data-day">
+                          <label for="formGroupExampleInput">SELECT TODAY DATE</label>
+                          <input data-date-format="dd/mm/yyyy" class="form-control"  id="datepicker2">
+                          <span class="data-calendar"><img class="today_date" src="./Images/small-icon/Calendar.svg" alt="calendar"></span>
+                       </div>
+                      </div>
+                     </div> <!--row end-->
+                     <div class="row mt-5 mb-5 justify-content-center">
+
+                    <input type="submit" class="btn admision_submit" value="SUBMIT">                       
+                     </div>
+                   
+                  </div>
+
+                  </form>
+                
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer class="d-flex mt-3 justify-content-center">
+         <p class="copy">Designed & Developed by <span class="font-weight-bold"> Knowhere Studio</span></p>
+      </footer>
+      <!--Scripts lib-->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script type="text/javascript"  src="./Scripts/admission.js"></script>
+   </body>
+</html>

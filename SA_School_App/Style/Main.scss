@@ -1,0 +1,95 @@
+@import "./Template/color";
+@import "./Template/mixin";
+@import "./Template/buttons";
+@import "./Template/page/all";
+
+
+
+
+// welcome text
+.dashboard {
+.dashboard_welcomeText {
+  width: 182px;
+  height: 40px;
+  opacity: 0.9;
+  font-size: 40px;
+  font-weight: 600;
+
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: $text_dark2;
+  width: 100%;
+  text-align: center;
+}
+
+
+// main card
+
+.mainCard {
+  width: 800px;
+  .pictureCard{
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  @include shadow2;
+  background-color: #ffffff;
+  position: relative;
+  margin: 20px 20px 40px 20px;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+ 
+  // class extend 
+  .picture-after{
+    color: $text_dark2;
+    font-weight: 600;
+    text-align: center;
+    margin-top: -20px;
+    text-decoration: none;
+  }
+
+  .pictureText{
+    @extend .picture-after;
+  }
+
+}
+.mainCard:hover .pictureText {
+  text-decoration: none; 
+}
+// footer
+footer{
+  // flex-shrink: 0;
+  p.copy{
+  color: $text_dark2;
+  letter-spacing: normal;
+  font-size: 16px;  
+  }
+  
+}
+}
+.text-clr_1 {
+  color: $modal_title;
+}
+
+// section.container{
+//   flex-shrink: 0;
+// }
+
+// importing all css page
+@import "./Template/page/login-page";
+@import "./Template/page/forget-password-page";
+@import "./Template/page/admission";
+@import "./Template/page/master";
+@import "./Template/page/faculty_details";
+@import "./Template/page/classv";
+
+
+
+// custom checkbox
+@import "./Template/checkbox.scss";
+
+
+// importing respsive css 
+@import "./Template/responsive";    

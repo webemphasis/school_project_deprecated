@@ -1,0 +1,51 @@
+.class_V #example_wrapper > div:nth-child(3) {
+  background-color: #fff;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 80px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.class_V #example_wrapper > div:nth-child(3) > div:first-child {
+  display: none;
+}
+
+.class_V #example > thead > tr > th:nth-child(1) {
+  border-top-left-radius: 0px !important;
+}
+
+.class_V #example > thead > tr > th:nth-child(1) {
+  border-top-left-radius: 0px !important;
+}
+
+.class_V #example > thead > tr > th:nth-child(6) {
+  border-top-right-radius: 0px !important;
+}
+
+.class_V table.dataTable {
+  margin-top: 0px !important;
+}
+
+.class_V .thead1, .class_V .thead2 {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+}
+
+.class_V .thead1 {
+  border-bottom: 1px solid #F5F6FA;
+}
+
+.class_V .thead1 .tab-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.class_V #example_wrapper > div:nth-child(1) {
+  display: none;
+}
+/*# sourceMappingURL=classv.css.map */

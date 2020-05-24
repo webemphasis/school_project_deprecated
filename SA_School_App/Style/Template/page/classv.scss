@@ -1,0 +1,320 @@
+.class_V{
+   
+    #example_wrapper > div:nth-child(3){
+        background-color: #fff;
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 80px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    #example_wrapper > div:nth-child(3) > div:first-child{
+        display: none;
+    }
+
+    #example > thead > tr > th:nth-child(1){
+        border-top-left-radius: 0px !important;
+    }
+    #example > thead > tr > th:nth-child(1){
+        border-top-left-radius: 0px !important;
+    }
+    #example > thead > tr > th:nth-child(6){
+        border-top-right-radius: 0px !important;  
+    }
+    table.dataTable{
+        margin-top: 0px !important
+    }
+    #example.tb_1 > tbody > tr > td:nth-child(3){
+        display: flex;
+        justify-content: center;
+        
+
+        p {
+            text-align: justify;
+        }
+
+    }
+   
+
+    //thead2
+    .thead1, .thead2 {
+        width: 100%;
+        height: 80px;
+        background-color: #fff;
+        
+    }
+    .thead2{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    // .thead1{
+    //    border-bottom: 10px solid #F5F6FA;
+    //    border-top-left-radius: 10px;
+    //    border-top-right-radius: 10px; 
+    // }
+
+    .thead1 .slider_bg{
+        position: relative;
+        width: auto;
+        height: 10px;
+        background-color: #F5F6FA;
+        top: 10px;
+        overflow: hidden;
+    }
+    .thead1 .slider_bg .slider{
+        position: absolute;
+        border: 3px solid $border_clr1;
+        z-index: 5;
+        top: 2px;
+        width: calc(100% - 65vw );
+        left: 0%;
+        visibility: visible;
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+}
+
+    .thead1 .tab-text{
+        position: relative;
+        text-align: center;
+        margin-top: 20px;
+        color: $text_dark2;
+        font-weight: 600;
+        text-transform: capitalize;
+        cursor: pointer;
+        // font-size: 22px;
+        font-size: calc(1rem + 0.4vw);
+        
+     }
+        
+    #example_wrapper > div:nth-child(1){
+        display: none;
+    }
+    #example > thead > tr > th{
+        padding: 0px !important;
+        height: 80px;
+        text-align: center;
+        border-top: 0.1px solid $grey3;
+        border-bottom: 0.1px solid $grey3;   
+    }
+
+    // table one
+
+   
+    table.tb_1 > tbody > tr > td:nth-child(3){
+        text-align: center;
+    }
+  
+    //  removed blue outline
+    
+    #example > tbody > tr > td{
+    outline: none;
+    border-bottom: 0.1px solid $grey3;
+    }
+    #example > tbody > tr {
+        text-align: center;
+        height: 80px;
+    }
+   
+    #example_paginate > ul > li > a{
+    color: $gray1 !important;
+    }
+
+    .thead3{
+        min-height: 600px;
+        width: auto;
+        background-color: $white;
+    }
+    #freeStructure_tab{
+        display: none;
+    }
+    #Subject_tab{
+        display: block;
+    }
+
+
+    #timeTable_tab{
+        display: none;
+        position: relative;
+        z-index: 8;
+
+        // week calendar
+    .dialog_box{
+        width: 352px;
+        height: 302px;
+        background-color: $white;
+        position: absolute;
+        z-index: 9999;
+        top: 0px;
+        left: 0px;
+        box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.16);
+
+    .add_Subject{
+        border: none;
+        outline: none;
+        border-bottom: 3px solid $gray1;
+        width: 300px;
+        font-size: calc(1rem + 0.4vw);
+    }
+    .time_schedule{
+        border: none;
+        outline: none;
+        background-color: $text_dark3;
+        width: 114px;
+        height: 39px;
+        color: $border_clr1;
+        font-size: 20px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        text-align: center;
+}
+    .time_schedule::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    input.add_Subject::-webkit-input-placeholder {
+        font-size: 20px;
+        color: $gray1;
+    }
+    }
+    .dialog_close{
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+        color: $modelclose;
+    }
+    .dialog_save_btn{
+        padding: 19px 50px;
+        border: none;
+        border-radius: 4px;
+        text-align: center;
+        background-color: $gray1;
+        color: $white;
+        cursor: pointer;     
+    }   
+    
+
+    }
+
+    .sub_menu2{
+        display: none;
+    }
+    .sub_menu3{
+        display: none;
+    }
+    
+
+
+    #timeTable_tab{
+        .timetable_main {
+            width: 100%;
+            overflow: overlay;
+          }
+          .timetable-box {
+            border-right: 0.2px solid $gray1; 
+            border-top: 0.2px solid $gray1; 
+            color: $text_dark2;
+            font-weight: 500;
+            flex: 1;
+            -webkit-flex: 1;
+            min-width: 135.8px;
+            min-height: 102px;
+            display: flex;
+            font-size: calc(1rem + 0.2vw);
+            justify-content: center;
+            align-items: center;
+          }
+          .lunch{
+            cursor: auto !important;
+          }
+
+          div.timetable_main > div > div > div:nth-child(6){
+              background-color: $lightGrey;
+          }
+
+          div.timetable_main > div > div > div:nth-child(10){
+            border-right: none;
+          }
+          div.timetable_main > div > div > div:nth-child(1){
+            
+            cursor: auto;
+          }
+
+          div.timetable_main > div > div > .subjects{
+            cursor: pointer;
+          }
+         
+          
+
+    }
+    
+    #Newcomponent .modal-content{
+        min-height: 603px;
+    }
+    #Newcomponent input[type="text"]{
+        width: calc(100% - 50px);
+        height: 50px;
+        border: solid 1px $gray1;
+        color: $gray1;
+        border-radius: 4px;
+    }
+    #Newcomponent select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none; 
+        appearance: none; 
+        outline: 0; 
+        background-image: url("../../Images/small-icon/down.svg");
+        background-repeat: no-repeat;
+        background-position-x: 98%;
+        background-position-y: 50%;
+        width: calc(100% - 50px);
+        height: 50px;  
+    }
+
+
+    #Newcomponent input::-webkit-input-placeholder{
+        color: $gray1;
+        font-size: 20px;
+    }
+
+    #Newcomponent label{
+        font-size: 16px;
+        color: $gray1;
+    }
+
+    .modal_classv_cus{
+        margin: 0 auto;
+        padding-left: 57px;
+        margin-top: 80px;
+      }
+
+      .modal_classv_cus2{
+        margin-top: 40px; 
+      }
+      #add_component{
+        // width height color radius background color
+        @include button_bb(360px,50px,4px,$gray1,$white);
+        font-weight: 600;
+        cursor: pointer;
+      }
+   
+      .pagination{
+        justify-content: center !important;
+      }
+
+}    
+    
+
+
+
+

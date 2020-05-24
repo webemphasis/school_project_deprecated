@@ -1,0 +1,252 @@
+//***************navigation arrow start*******************/
+  // arrowSize , BorderSize, arrowBarWidth, arrowBarHeight)
+.navArrow {
+    margin: 25px;
+    // arrowSize , BorderSize, arrowBarWidth, arrowBarHeight)
+    @include navArrow(15px, 4px, 3px, 30px);
+    @include arrowColor($arrow_color);
+  }
+//*****************navigation arrow end*******************/
+
+
+
+.navigationPath{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.admissionText{
+    @include HeadingText(40);
+    margin-top: 10px;
+}
+
+.innerWrapper{
+    width: calc(100vw - 10%);
+    height: calc(100vh - 10%);
+    //height: 800px;
+    background-color: $white;
+
+    
+}
+.admission_main{
+    margin-top: 120px;
+}
+
+.studentsApplication{
+    background-color: $navbar_color2;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AdmissionText2{
+    font-size: 25px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.28;
+    letter-spacing: normal;
+    text-align: left;
+    color: $aplic_sub_heading;
+}
+
+.AdmissionText3{
+    @extend .AdmissionText2;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.innerWrapper{
+    .profileImg{
+        position: relative;
+    }
+    .profileImg img[alt="camera"] {
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+}
+}
+
+.admissionContainer{
+    margin-top: 100px;
+    .admissionLeft
+    , .admissionRight{
+        padding-right: 150px;
+        padding-left: 150px;
+    }
+    .admissionRight .select_state{
+        margin-top: 8px;
+    }
+    input, select {
+        height: 44px !important;
+        margin-bottom: 20px;
+    }
+    input[type="radio"]{
+        height: 15px !important;
+        margin-top: 6px;  
+    }
+
+    .form-check-cus1, .form-check-cus2{
+        display: inline-block;
+    }
+    .form-check-cus2{
+        margin-left: 60px;
+    }
+    .form-check-label{
+        margin-left: 30px;
+    }
+    .cmrl{
+       margin-bottom: 80px; 
+    }
+    .mainfileUpload{
+        margin-left: 85px;
+        margin-right: 70px;
+        padding-left: 85px;
+        margin-top: 100px;
+        background-color: $lightGrey;
+        min-height: 200px;
+        height: auto;
+        padding-left: 70px;
+        border-radius: 10px;
+        width: 88%;
+        margin-bottom: 100px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .transferupload{
+        background: #fff;
+        width: 320px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 50px;
+        padding-left: 10px;
+    }
+    .transferupload input{
+        height: 28px !important;
+        margin-bottom: 0px;
+        width: 200px;
+    }
+    .othercerti{
+        padding-left: 150px; 
+    }
+
+}
+.cast_input{
+    margin-top: -10px;
+}
+
+.data-outer{
+    position: relative;
+}
+.data-outer.data-day{
+    width: 420px;
+}
+
+.data-calendar{
+    position: absolute;
+    right: 15px;
+    top: 40px;
+}
+
+.datepicker,
+.table-condensed {
+  width: 420px;
+  height:300px;
+}
+.birth_date, .today_date{
+    cursor: pointer;
+}
+.admissionhr{
+    @include paddingLR(100px,100px);
+    margin: 60px 0;
+    hr{
+       border-width: 1.5px; 
+    }
+}
+.addressInput{
+    @include paddingLR(150px,150px);
+}
+
+// file upload
+.file-input {
+    display: inline-block;
+    text-align: left;
+    background: $white;
+    padding: 16px;
+    width: 450px;
+    position: relative;
+    border-radius: 3px;
+  }
+  
+  .file-input > [type='file'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .file-input > .button {
+    display: inline-block;
+    cursor: pointer;
+    background: $choose_btn;
+    padding: 8px 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+  }
+  
+  .file-input:hover > .button {
+    background: $blue_dodge;
+    color: $white;
+  }
+  
+  .file-input > .label {
+    color: $label_color;
+    white-space: nowrap;
+    opacity: .3;
+  }
+  
+  .file-input.-chosen > .label {
+    opacity: 1;
+  }
+//   list items 
+.list-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.admision_submit{
+    width: 360px;
+    height: 50px;
+    border-radius: 4px;
+    border: solid 1px $submit_btn;
+    background-color: $submit_btn;
+    color: $white;
+}
+// custom select input box
+
+
+
+.gender-select {
+    display: inline-block;
+    padding: 4px 3px 3px 5px;
+    margin: 0;
+    outline:none; /* remove focus ring from Webkit */
+    line-height: 1.2;
+    background: #000;
+    color:white;
+    border:0;
+}
+
+
